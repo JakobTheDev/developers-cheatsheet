@@ -4,6 +4,21 @@ A list of commands which haven't been filed under a cheatsheet yet.
 
 ## Git
 
+Configure git
+```bash
+# Configure name and email
+git config --global user.name "Your Name"
+git config --global user.email "email@domain.tld"
+
+# Generate SSH key
+# Note: You will need to add the public key to your git account
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+# Add key to ssh-agent
+eval $(ssh-agent -s)
+ssh-add ~/.ssh/id_rsa
+```
+
 Basic git
 ```bash
 # Clone a repository
@@ -133,4 +148,23 @@ vi +100 foo.txt
 
 # When a file is already open
 :100
+```
+
+## ZSH
+Set up ZSH + oh-my-zsh + powerlevel9k
+```bash
+# Set zsh as the default shell
+chsh -s $(which zsh)
+
+# Install zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# Install powerlevel9k
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+
+# Set up your .zshrc
+# (I'd recommend source controlling it and copying the file onto your machine)
+
+# Use the .zshrc config
+source ~/.zshrc
 ```
