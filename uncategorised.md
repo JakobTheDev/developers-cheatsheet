@@ -2,6 +2,63 @@
 
 A list of commands which haven't been filed under a cheatsheet yet.
 
+## Docker
+
+General Docker info
+```bash
+# Get Docker version
+docker --version
+
+# General info about docker
+docker info
+
+# List docker images
+docker image ls
+
+# List all docker containers (running and all)
+docker container ls
+docker container ls --all
+```
+
+Build docker image
+```bash
+# Basic build
+docker build --tag=REPOSITORY/IMAGE_NAME .
+
+# Specify dockerfile
+docker build --tag=REPOSITORY/IMAGE_NAME --file ./DOCKERFILE-NAME .
+```
+
+Run docker container
+```bash
+# Simple run
+docker run -i REPOSITORY/IMAGE_NAME
+
+# Run with interactive shell
+docker run -it REPOSITORY/IMAGE_NAME
+
+# Run container in background with port exposed
+docker run -d -p LOCAL_PORT:CONTAINER-PORT REPOSITORY/IMAGE_NAME
+```
+
+Docker repository
+```bash
+# Login to DockerHub
+docker login
+
+# Tag image
+docker image-name --tag=USERNAME/REPOSITORY:VERSION
+```
+
+Clean up
+```bash
+# Remove all stopped containers
+docker container prune
+
+# Remove all dangling containers
+docker image prune
+```
+
 ## Git
 
 Configure git
