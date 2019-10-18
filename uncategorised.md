@@ -146,6 +146,20 @@ Grep currently running processes, filtering out the grep command itself.
 ps aux | grep foo_process | grep -v grep
 ```
 
+## npm
+
+```bash
+# audit packages in current directory for vulnerabilities
+npm audit
+npm audit --fix
+
+# Get currently installed version of a package
+npm list PACKAGE_NAME
+
+# Get details about a package from the npm registry
+npm view PACKAGE_NAME
+```
+
 ## SSL
 
 General OpenSSL commands
